@@ -1,0 +1,32 @@
+.background-dark{
+    background-color: rgb(77, 77, 77);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.timer{
+    font-size: 130px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.egg{
+    size: 200px;
+}
+
+.margin-top{
+    margin-top: 100px;
+}
+
+.margin-top-2{
+    margin-top: 200px;
+}
+
+.score{
+    font-size: 50px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
