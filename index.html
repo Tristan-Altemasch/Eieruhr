@@ -43,8 +43,8 @@
 
 
         function stopTimer(){
-            if (timeLeft == 0) {
-                alarm.pause();
+            if (timerStarted = true) {
+                alarm.stop();
                 timer.innerHTML = text;
                 timer.innerHTML = '05 : 00';
             }
@@ -72,6 +72,10 @@
 
     <div class="center margin-top-2 timer" id="timer">
         05 : 00
+    </div>
+        
+    <div class="center margin-top">
+        <img src="img/stop.png" alt="stop" onclick="stopTimer()">
     </div>
 
 </body>
