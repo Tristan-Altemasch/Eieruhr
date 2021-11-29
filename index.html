@@ -16,7 +16,7 @@
         function startTimer() {
             if (!timerStarted) {
                 let startTime = new Date().getTime();
-                let fiveMinutes = 1000 * 60 * 5;
+                let fiveMinutes = 1000 * 5;
                 let endTime = startTime + fiveMinutes;
 
 
@@ -40,6 +40,18 @@
                 timerStarted = true;
             }
         }
+
+
+        function stopTimer(){
+            if (timeLeft == 0) {
+                alarm.pause();
+                timer.innerHTML = text;
+                timer.innerHTML = '05 : 00';
+            }
+
+        }
+
+
     </script>
 
     </head>
