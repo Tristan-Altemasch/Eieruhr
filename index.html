@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
 
+    <head>
+    <meta charset="UTF-8">
+    <title>Eieruhr</title>
+
+       <link rel="stylesheet" href="stylesheet.css" type="text/css">
+       <link rel="manifest" href="manifest.json">
 
     <script>
-        let alarm = new Audio('alarm.mp3');
+        let alarm = new Audio('alarmEieruhr.mp3');
         let timerStarted = false;
 
 
@@ -35,35 +41,25 @@
             }
         }
     </script>
-    
-<head>
 
-  <meta charset="UTF-8">
-  <title>Eieruhr</title>
-  <link rel="stylesheet" href="stylesheet.css" type="text/css">
-
-</head>
+    </head>
 
 <body class="background-dark">
 
-<div>
-    <img src="img/menü.png" height="70px" width="70px" alt="menü">
-    <img src="img/bell.png"  style="float: right;" height="70px" width="70px" alt="Glocke">  
-</div>
+    <div>
+        <img src="img/menü.png" style="float: left;" height="70px" width="70px" alt="menü">
+        <img src="img/bell.png"  style="float: right;" height="70px" width="70px" alt="Glocke">  
+    </div>
 
-<br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-<div class="center margin-top-2 mybutton">
-    <img src="img/ei.png" height="400px" width="400px" alt="ei" onClick="javascript:openfunc()">
-</div>
+    <div class="center pulz">
+        <img class="pulz" onclick="startTimer()" src="img/ei.png" height="400px" width="400px" alt="ei">
+    </div>
 
-<div class="center margin-top timer" >
-    05:00
-</div>
-
-<div class="center margin-top-2 score">
-
-</div>
+    <div class="center margin-top-2 timer" id="timer">
+        05 : 00
+    </div>
 
 </body>
 

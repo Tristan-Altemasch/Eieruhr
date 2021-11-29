@@ -10,7 +10,7 @@
 .timer{
     font-size: 130px;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .egg{
@@ -31,6 +31,28 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#mybutton{
-    cursor: pointer;
+.button{
+    font-size: 50px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pulz {
+    
+    animation: pulse 1s linear infinite;
+}
+
+@-webkit-keyframes "pulse" {
+0% {
+ -webkit-transform: scale(1);
+ transform: scale(1);
+}
+50% {
+-webkit-transform: scale(0.98);
+transform: scale(0.98);
+}
+100% {
+ -webkit-transform: scale(1);
+transform: scale(1);
+}
 }
