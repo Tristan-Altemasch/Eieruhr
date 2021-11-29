@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html>
 
+
+    <script>
+        let alarm = new Audio('alarm.mp3');
+        let timerStarted = false;
+
+
+        function startTimer() {
+            if (!timerStarted) {
+                let startTime = new Date().getTime();
+                let fiveMinutes = 1000 * 60 * 5;
+                let endTime = startTime + fiveMinutes;
+
+
+                setInterval(function() {
+                    let timeLeft = endTime - new Date().getTime();
+
+
+                    if (timeLeft > 0) {
+                        let minutes = timeLeft / (1000 * 60);
+                        minutes = Math.floor(minutes);
+                        let seconds = (timeLeft / 1000) % 60;
+                        seconds = Math.round(seconds);
+                        seconds = ('0' + seconds).slice(-2);
+                        let text = '0'  +  minutes  +  ' : '  +  seconds;
+                        timer.innerHTML = text;
+                    } else {
+                        alarm.play();
+                        timer.innerHTML = '00 : 00';
+                    }
+                }, 1000);
+                timerStarted = true;
+            }
+        }
+    </script>
+    
 <head>
+
   <meta charset="UTF-8">
   <title>Eieruhr</title>
   <link rel="stylesheet" href="stylesheet.css" type="text/css">
-
-  <style>
-     
-  </style>
 
 </head>
 
@@ -16,14 +48,13 @@
 
 <div>
     <img src="img/menü.png" height="70px" width="70px" alt="menü">
-    <img src="img/bell.png"  style="float: right;" height="70px" width="70px" alt="Glocke">
-    
+    <img src="img/bell.png"  style="float: right;" height="70px" width="70px" alt="Glocke">  
 </div>
 
 <br>
 
-<div class="center margin-top-2">
-    <img src="img/ei.png" height="400px" width="400px" alt="ei">
+<div class="center margin-top-2 mybutton">
+    <img src="img/ei.png" height="400px" width="400px" alt="ei" onClick="javascript:openfunc()">
 </div>
 
 <div class="center margin-top timer" >
@@ -31,7 +62,7 @@
 </div>
 
 <div class="center margin-top-2 score">
-    Score:
+
 </div>
 
 </body>
