@@ -45,8 +45,10 @@ p{
 }
 
 .button{
-    font-size: 50px;
+    font-size: 100px;
     color: white;
+    border: none;
+    background-color: rgb(77, 77, 77);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -61,6 +63,11 @@ p{
     font-family: 'Roboto', sans-serif;
 }
 
+.stopbtn{
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    
+}
 
 @-webkit-keyframes "pulse" {
 0% {
